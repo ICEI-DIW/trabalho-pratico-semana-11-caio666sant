@@ -4,10 +4,10 @@ Nessa etapa, vamos evoluir o projeto anterior e contemplar um ambiente de desenv
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Caio Santos Borges
+- Matricula: 889954
+- Proposta de projeto escolhida: diretorio de receitas
+- Breve descrição sobre seu projeto: site de receitas com receitas internacionais e nacionais
 
 **Print do teste da API com visualização do JSON**
 
