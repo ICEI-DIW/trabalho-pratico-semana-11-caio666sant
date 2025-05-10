@@ -10,56 +10,133 @@
 </head>
 <header class="bg-danger rounded">
     <h1 class="text-light p-3 ">Tudo bão</h1>
-    <nav class="navbar navbar-expand-lg bg-danger">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Sobre nós.html">Sobre nós</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="patrocinios.html">Patrocinios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contatos</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+    <nav class="navbar navbar-expand-lg bg-danger mb-3">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link active text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active text-white" href="Sobre nós.html">Sobre nós</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="patrocinios.html">Patrocínios</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contato.html">Contatos</a></li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" />
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
         </div>
-      </nav>
-      <aside>
-        <div class="  rounded">
-             <div class="btn-group">
-                 <button type="button" class="btn btn-danger">Categorias</button>
-                 <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                   <span class="visually-hidden">Toggle Dropdown</span>
-                 </button>
-                 <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="carnes.html">Carnes</a></li>
-                   <li><a class="dropdown-item" href="massas.html">Massas</a></li>
-                   <li><a class="dropdown-item" href="sopa.html">Sopas</a></li>
-                   <li><a class="dropdown-item" href="doce.html">Doces</a></li>
-                 </ul>
-               </div>
-           </div>
-         </div>
-     </aside>
+      </div>
+    </nav>
 </header>
 <body>
     <main class="p-3 mb-2 bg-white text-dark" >
         <h2 class="fs-1 text-center text-bg-danger p-3 rounded" >Detalhes da receita</h2>
+        <aside class="mb-5">
+        <div class="caixa pesquisa">
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger">Categorias</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="carnes.html">Carnes</a></li>
+                  <li><a class="dropdown-item" href="massas.html">Massas</a></li>
+                  <li><a class="dropdown-item" href="sopa.html">Sopas</a></li>
+                  <li><a class="dropdown-item" href="doce.html">Doces</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+     </aside>
         <div id="detalhes" class="container"></div>
         <script src="app.js"></script>
+        <script>
+          const dados = [
+    {
+      "id": 1,
+      "titulo": "Filé ao molho gorgonzola",
+      "descricao": "O filé mignon é temperado apenas com sal e pimenta. Em seguida, é frito na manteiga, com azeite, alecrim e alho. Fique de olho no ponto para manter a suculência da carne. O gorgonzola traz uma textura cremosa, com sabor suave, levemente doce, porém com um toque picante intenso.",
+      "categoria": "Carnes",
+      "data": " 02/03/25",
+      "ingredientes": [
+        "500g de filé mignon",
+        "1/2 de pimenta do reino (ou a gosto)",
+        "1 colher de sopa de manteiga",
+        "1 fio de azeite",
+        "1 ramo de alecrim",
+        "1 dente de alho amascado ou picado",
+        "200g de queijo gorgonzola",
+        "300g de creme de leite fresco",
+        "1 colher de chá de sal (ou a gosto)",
+      ],
+      "imagem": "./imgs/file.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Caldo de mandioca",
+      "descricao": "Que tal fazer um caldo de mandioca para o jantar? Ao contrário do que dizem por aí, sopas e caldos são janta, sim! Muito populares nos dias mais frios, os caldos podem ser tão satisfatórios quanto qualquer outro alimento.",
+      "categoria": "Sopas",
+      "data": "05/03/25",
+      "ingredientes": [
+        "2 kg de mandioca amarela",
+        "1 cebola grande bem picada",
+        "3 dentes de bem alho picados",
+        "3 caldos de costela",
+        "3 tomates sem sementes picados",
+        "2 pedaços grandes de bacon picado",
+        "2 calabresas grande picadas em cubinhos",
+        "Cebolinha a gosto",
+      ],
+      "imagem": "./imgs/mandioca.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Lasanha",
+      "descricao": "A receita de lasanha de carne moída é um prato clássico, muito amado e muito fácil de preparar. Também conhecida como lasanha à bolonhesa, pela sua origem em Bolonha, na Itália, essa receita conquistou o mundo!",
+      "categoria": "Massas",
+      "data": "01/03/2025",
+      "ingredientes": [
+        "500g de massa para lasanha",
+        "500g de carne moída",
+        "500g de presunto",
+        "2 copos de leite",
+        "3 colheres de sopa de farinha de trigo",
+        "3 colheres de sopa de manteiga",
+        "3 colheres de sopa de oléo",
+        "2 caixas de creme de leite",
+        "1 cebola ralada",
+        "3 dentes de alho picados",
+        "1 caixa de molho de tomate",
+        "500g de queijo muçarela fatiado",
+        "1 pacote de queijo parmesão ralado",
+        "Sal e pimenta a gosto",
+      ],
+      "imagem": "./imgs/lasanha.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Bolo de cenoura",
+        "descricao": "O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista o coração de todos!",
+        "categoria": "Doces",
+        "data": "07/03/25",
+        "ingredientes": [
+          "3 cenouras médias raladas", 
+          "4 ovos", 
+          "1/2 de chá xícara de óleo", 
+          "3 de chá xícaras de açúcar",
+          "2 e 1/2 de chá xícaras de farinha de trigo", 
+          "1 colher de sopa de manteiga", 
+          "1 colher de sopa de fermento em pó", 
+          "3 colheres de sopa de chocolate em pó", 
+          "1 de chá xícara de leite", 
+        ],
+        "imagem": "./imgs/cenoura.jpg"
+      },
+    
+  ]
+        </script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
